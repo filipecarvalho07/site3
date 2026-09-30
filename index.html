@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Centro de Comando</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">◈</div>
+
+                <div>
+                    <h2>Centro</h2>
+                    <span>de Comando</span>
+                </div>
+            </div>
+
+            <nav class="menu">
+
+                <a href="#dashboard" class="menu-item active">
+                    <span>▣</span>
+                    Dashboard
+                </a>
+
+                <a href="#radar" class="menu-item">
+                    <span>◉</span>
+                    Radar
+                </a>
+
+                <a href="#alertas" class="menu-item">
+                    <span>!</span>
+                    Alertas
+                </a>
+
+                <a href="#historico" class="menu-item">
+                    <span>↻</span>
+                    Histórico
+                </a>
+
+                <a href="#perfil" class="menu-item">
+                    <span>●</span>
+                    Meu Perfil
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="system-status">
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong>Sistema Online</strong>
+                        <small>Operação normal</small>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <header class="topbar">
+
+                <div>
+                    <p class="page-subtitle">PAINEL PRINCIPAL</p>
+                    <h1>Centro de Comando</h1>
+                </div>
+
+                <div class="user-area">
+
+                    <div class="notification">
+                        🔔
+                        <span class="notification-number">3</span>
+                    </div>
+
+                    <div class="user-info">
+                        <div class="avatar">JS</div>
+
+                        <div>
+                            <strong id="headerName">João Silva</strong>
+                            <small>Operador</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD -->
+            <section id="dashboard">
+
+                <!-- CARDS DE ESTATÍSTICAS -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">◉</div>
+
+                        <div>
+                            <span>Alvos Detectados</span>
+                            <strong>12</strong>
+                            <small class="positive">+4 hoje</small>
+                        </div>
+                    </div>
+
+
+                    <div class="stat-card">
+                        <div class="stat-icon red">!</div>
+
+                        <div>
+                            <span>Alertas Críticos</span>
+                            <strong>03</strong>
+                            <small class="negative">Requer atenção</small>
+                        </div>
+                    </div>
+
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">✓</div>
+
+                        <div>
+                            <span>Sistema</span>
+                            <strong>98%</strong>
+                            <small class="positive">Operação normal</small>
+                        </div>
+                    </div>
+
+
+                    <div class="stat-card">
+                        <div class="stat-icon yellow">◷</div>
+
+                        <div>
+                            <span>Tempo de Operação</span>
+                            <strong>08:42</strong>
+                            <small>Desde o início</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- ÁREA PRINCIPAL -->
+                <div class="dashboard-grid">
+
+                    <!-- RADAR -->
+                    <div class="card radar-card" id="radar">
+
+                        <div class="card-header">
+
+                            <div>
+                                <span class="card-label">MONITORAMENTO</span>
+                                <h2>Radar Dinâmico</h2>
+                            </div>
+
+                            <span class="live">
+                                <span></span>
+                                AO VIVO
+                            </span>
+
+                        </div>
+
+
+                        <div class="radar-container">
+
+                            <div class="radar">
+
+                                <div class="radar-circle circle-1"></div>
+                                <div class="radar-circle circle-2"></div>
+                                <div class="radar-circle circle-3"></div>
+
+                                <div class="radar-line"></div>
+
+                                <div class="target target-1"></div>
+                                <div class="target target-2"></div>
+                                <div class="target target-3"></div>
+
+                                <div class="radar-center"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="radar-footer">
+
+                            <div>
+                                <span>Alcance</span>
+                                <strong>100 km</strong>
+                            </div>
+
+                            <div>
+                                <span>Alvos</span>
+                                <strong>12</strong>
+                            </div>
+
+                            <div>
+                                <span>Status</span>
+                                <strong class="online">Normal</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ALERTAS -->
+                    <div class="card alerts-card" id="alertas">
+
+                        <div class="card-header">
+
+                            <div>
+                                <span class="card-label">ATENÇÃO</span>
+                                <h2>Alertas Recentes</h2>
+                            </div>
+
+                            <a href="#">Ver todos</a>
+
+                        </div>
+
+
+                        <div class="alert-list">
+
+                            <div class="alert critical">
+
+                                <div class="alert-icon">!</div>
+
+                                <div class="alert-content">
+                                    <strong>Alerta Crítico</strong>
+                                    <p>Alvo detectado na zona prioritária.</p>
+                                    <small>Agora</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="alert high">
+
+                                <div class="alert-icon">!</div>
+
+                                <div class="alert-content">
+                                    <strong>Alerta Alto</strong>
+                                    <p>Movimentação identificada no setor 04.</p>
+                                    <small>Há 5 minutos</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="alert moderate">
+
+                                <div class="alert-icon">!</div>
+
+                                <div class="alert-content">
+                                    <strong>Alerta Moderado</strong>
+                                    <p>Atualização do sistema disponível.</p>
+                                    <small>Há 12 minutos</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATUS DO SISTEMA -->
+                <div class="card system-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="card-label">MONITORAMENTO</span>
+                            <h2>Status do Sistema</h2>
+                        </div>
+
+                        <span class="system-online">
+                            ● Todos os sistemas operacionais
+                        </span>
+
+                    </div>
+
+
+                    <div class="system-grid">
+
+                        <div class="system-item">
+                            <div class="system-title">
+                                <span>Radar</span>
+                                <strong>100%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width:100%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="system-item">
+                            <div class="system-title">
+                                <span>Comunicação</span>
+                                <strong>98%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width:98%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="system-item">
+                            <div class="system-title">
+                                <span>Processamento</span>
+                                <strong>94%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width:94%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="system-item">
+                            <div class="system-title">
+                                <span>Banco de Dados</span>
+                                <strong>99%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar" style="width:99%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PERFIL -->
+            <section id="perfil" class="profile-section">
+
+                <div class="profile-header">
+
+                    <div class="large-avatar">JS</div>
+
+                    <div>
+                        <span class="card-label">PERFIL DO USUÁRIO</span>
+                        <h2 id="profileName">João Silva</h2>
+                        <p>Operador do Centro de Comando</p>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-grid">
+
+                    <div class="card profile-card">
+
+                        <h2>Informações pessoais</h2>
+
+                        <div class="profile-info">
+
+                            <div>
+                                <span>Nome</span>
+                                <strong>João Silva</strong>
+                            </div>
+
+                            <div>
+                                <span>E-mail</span>
+                                <strong>joao.silva@email.com</strong>
+                            </div>
+
+                            <div>
+                                <span>Cargo</span>
+                                <strong>Operador</strong>
+                            </div>
+
+                            <div>
+                                <span>Setor</span>
+                                <strong>Monitoramento</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card profile-card">
+
+                        <h2>Status da conta</h2>
+
+                        <div class="account-status">
+
+                            <div class="status-row">
+                                <span>Status</span>
+                                <strong class="online">Ativo</strong>
+                            </div>
+
+                            <div class="status-row">
+                                <span>Último acesso</span>
+                                <strong>Hoje, 18:42</strong>
+                            </div>
+
+                            <div class="status-row">
+                                <span>Nível de acesso</span>
+                                <strong>Operador</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+                Centro de Comando © 2026 — Sistema de monitoramento
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
